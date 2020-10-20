@@ -272,7 +272,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 1000013439107638, guid: 12c0514646d7b6b45b8439112435321e, type: 3}
       propertyPath: m_Name
-      value: chFolding.A2
+      value: chFolding
       objectReference: {fileID: 0}
     - target: {fileID: 1000013439107638, guid: 12c0514646d7b6b45b8439112435321e, type: 3}
       propertyPath: m_IsActive
