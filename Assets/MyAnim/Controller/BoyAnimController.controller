@@ -12,7 +12,7 @@ AnimatorController:
   - m_Name: Stand_Down
     m_Type: 3
     m_DefaultFloat: 0
-    m_DefaultInt: 1
+    m_DefaultInt: 0
     m_DefaultBool: 0
     m_Controller: {fileID: 0}
   m_AnimatorLayers:
@@ -322,16 +322,16 @@ AnimatorStateMachine:
   m_ChildStates:
   - serializedVersion: 1
     m_State: {fileID: 1102194655261071490}
-    m_Position: {x: 432, y: 288, z: 0}
+    m_Position: {x: 576, y: 240, z: 0}
   - serializedVersion: 1
     m_State: {fileID: 1102214295131389790}
-    m_Position: {x: 576, y: 168, z: 0}
+    m_Position: {x: 576, y: 144, z: 0}
   - serializedVersion: 1
     m_State: {fileID: 1102605087861112354}
-    m_Position: {x: 612, y: 36, z: 0}
+    m_Position: {x: 576, y: 48, z: 0}
   - serializedVersion: 1
     m_State: {fileID: 1102825126637194080}
-    m_Position: {x: 312, y: 48, z: 0}
+    m_Position: {x: 336, y: 96, z: 0}
   - serializedVersion: 1
     m_State: {fileID: 1102854929928243740}
     m_Position: {x: 228, y: 204, z: 0}
