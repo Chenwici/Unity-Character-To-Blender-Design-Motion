@@ -11,8 +11,8 @@ public class SetYogaPAButton : MonoBehaviour
     {
         DollAnimator    = GameObject.Find("LiamAnim");
         AllPAButton     = GameObject.Find("AllPAButton");
-        VIVE_Detecting  = GameObject.Find("VIVE_Detecting");
-        VIVE_Detecting.SetActive(false);
+        //VIVE_Detecting  = GameObject.Find("VIVE_Detecting");
+        //VIVE_Detecting.SetActive(false);
     }
     public void StartRunPA()
     {

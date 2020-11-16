@@ -30,7 +30,7 @@
 
 			//Do an invert binarize the image
 			Mat mask = new Mat ();
-			Cv2.Threshold (cannyEdges, mask, 70.0, 255.0, ThresholdTypes.BinaryInv);
+			Cv2.Threshold (cannyEdges, mask, 125.0, 255.0, ThresholdTypes.BinaryInv);
 
 			// result, passing output texture as parameter allows to re-use it's buffer
 			// should output texture be null a new texture will be created

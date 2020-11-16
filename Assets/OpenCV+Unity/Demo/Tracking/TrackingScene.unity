@@ -178,6 +178,25 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &466976239 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4207888617748532007, guid: 6561b045bcda5294283f556f554394eb,
+    type: 3}
+  m_PrefabInstance: {fileID: 4207888617368065379}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &466976241
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 466976239}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4a55cfab1fdf27e4fa9482075d6fcca2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Surface: {fileID: 466976239}
 --- !u!1 &582519185
 GameObject:
   m_ObjectHideFlags: 0
@@ -394,6 +413,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Canvas
+      objectReference: {fileID: 0}
+    - target: {fileID: 4207888617748532005, guid: 6561b045bcda5294283f556f554394eb,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6561b045bcda5294283f556f554394eb, type: 3}
