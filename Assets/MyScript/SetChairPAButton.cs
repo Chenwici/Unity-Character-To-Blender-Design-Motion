@@ -24,6 +24,13 @@ public class SetChairPAButton : MonoBehaviour
     }
     IEnumerator PA_Detect(int Cycle)
     {
+        //▼▼轉攝影機視角▼▼
+        for (int i = 0; i > -56; i--)
+        {
+            DollCameraObj.transform.eulerAngles = new Vector3(0, i, 0);
+            yield return new WaitForSeconds(0.02f);
+        }
+        //▲▲轉攝影機視角▲▲
         ChairObj.SetActive(true);//開啟椅子
         yield return new WaitForSeconds(1);
         DollAnimator.GetComponent<Animator>().SetInteger("ChairPA", 1);//執行第一動作-墊腳肩起始動作
@@ -32,6 +39,7 @@ public class SetChairPAButton : MonoBehaviour
         //▼▼▼▼▼定位檢測▼▼▼▼▼
         PA_Detect_flag = true;
         VIVE_DetectOK = false;
+        VIVE_Detecting.SetActive(true);//定位關閉圖示
         yield return new WaitForSeconds(1);
         while (PA_Detect_flag)
         {
@@ -61,10 +69,12 @@ public class SetChairPAButton : MonoBehaviour
         DollAnimator.GetComponent<Animator>().SetInteger("ChairPA", 2);//恢復最初動作
         yield return new WaitForSeconds(1);
         DollAnimator.GetComponent<Animator>().SetInteger("ChairPA", 21);//換坐站動作(定位點為坐姿)
+        ChairObj.GetComponent<Animation>().Play("ChairAnim1");
 
         //▼▼▼▼▼定位檢測▼▼▼▼▼
         PA_Detect_flag = true;
         VIVE_DetectOK = false;
+        VIVE_Detecting.SetActive(true);//定位關閉圖示
         yield return new WaitForSeconds(1);
         while (PA_Detect_flag)
         {
@@ -98,6 +108,7 @@ public class SetChairPAButton : MonoBehaviour
         //▼▼▼▼▼定位檢測▼▼▼▼▼
         PA_Detect_flag = true;
         VIVE_DetectOK = false;
+        VIVE_Detecting.SetActive(true);//定位關閉圖示
         yield return new WaitForSeconds(1);
         while (PA_Detect_flag)
         {
@@ -128,5 +139,15 @@ public class SetChairPAButton : MonoBehaviour
         }
         yield return new WaitForSeconds(1);
         DollAnimator.GetComponent<Animator>().SetInteger("ChairPA", 0);//恢復站力動作(結束)
+        ChairObj.GetComponent<Animation>().Play("ChairAnim2");//椅子縮小並返回原點
+        //▼▼轉回攝影機視角▼▼
+        for (int i = -55; i < 1; i++)
+        {
+            DollCameraObj.transform.eulerAngles = new Vector3(0, i, 0);
+            yield return new WaitForSeconds(0.02f);
+        }
+        //▲▲轉回攝影機視角▲▲
+        ChairObj.SetActive(false);//關閉椅子
+        AllPAButton.SetActive(true);
     }
 }

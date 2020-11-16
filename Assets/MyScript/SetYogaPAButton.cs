@@ -131,6 +131,7 @@ public class SetYogaPAButton : MonoBehaviour
             yield return new WaitForSeconds(2);
         }
         yield return new WaitForSeconds(1);
+        DollAnimator.GetComponent<Animator>().SetInteger("YogaPA", 0);
         AllPAButton.SetActive(true);
     }
 }
